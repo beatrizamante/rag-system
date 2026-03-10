@@ -1,6 +1,4 @@
-# Hermes RAG - Domain-Driven RAG System
-
-A comprehensive Retrieval-Augmented Generation (RAG) system built with Domain-Driven Design (DDD) principles.
+# Lil'Hag RAG - RAG System
 
 ## Architecture
 
