@@ -1,4 +1,4 @@
-# Hermes RAG - Core Dependencies
+# Core Dependencies
 # ===============================
 
 # Web Framework

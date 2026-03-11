@@ -1,4 +1,4 @@
-# Hermes RAG - Domain-Driven RAG System
+# LilHag RAG
 
 A comprehensive Retrieval-Augmented Generation (RAG) system built with Domain-Driven Design (DDD) principles.
 
@@ -74,7 +74,7 @@ pip install -r requirements.txt
 
 # Configure environment
 cp .env.example .env
-# Edit .env with your OpenAI API key
+# Edit .env with your AI API key
 ```
 
 ### Running the Server

@@ -38,26 +38,22 @@ class ChunkingConfig:
     """
     strategy: ChunkingStrategy = ChunkingStrategy.RECURSIVE
 
-    chunk_size: int = 512  # Target size in characters
-    chunk_overlap: int = 50  # Overlap between chunks
-    min_chunk_size: int = 100  # Minimum chunk size
-    max_chunk_size: int = 1000  # Maximum chunk size
+    chunk_size: int = 512
+    chunk_overlap: int = 50
+    min_chunk_size: int = 100
+    max_chunk_size: int = 1000
 
-    # Token-based limits (more accurate for LLM context)
     use_token_counting: bool = True
     target_tokens: int = 256
     max_tokens: int = 512
 
-    # Separator configuration for recursive strategy
     separators: tuple = ("\n\n", "\n", ". ", " ", "")
 
-    # Text normalization
     normalize_whitespace: bool = True
     normalize_unicode: bool = True
     remove_special_chars: bool = False
     lowercase: bool = False
 
-    # Metadata preservation
     preserve_metadata: bool = True
     include_page_numbers: bool = True
 

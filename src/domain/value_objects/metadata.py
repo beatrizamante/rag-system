@@ -1,7 +1,7 @@
 """Document Metadata Value Object."""
 from dataclasses import dataclass, field
 from datetime import datetime
-from typing import Optional, Dict, Any, List
+from typing import Optional, Dict, Any
 
 
 @dataclass(frozen=True)
@@ -18,12 +18,10 @@ class DocumentMetadata:
     page_count: Optional[int] = None
     language: str = "en"
 
-    # Extraction metadata
     extraction_date: datetime = field(default_factory=datetime.utcnow)
     extraction_method: str = "default"
 
-    # Custom metadata
-    tags: tuple = field(default_factory=tuple)  # Immutable sequence
+    tags: tuple = field(default_factory=tuple)
     custom_fields: Dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:

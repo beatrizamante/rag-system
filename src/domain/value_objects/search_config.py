@@ -1,6 +1,6 @@
 """Search Configuration Value Object."""
 from dataclasses import dataclass
-from typing import Optional, Dict, Any, List
+from typing import Optional, Dict, Any
 from enum import Enum
 
 
@@ -37,31 +37,24 @@ class SearchConfig:
     Immutable configuration for search operations.
     Controls retrieval behavior and ranking.
     """
-    # Similarity configuration
     similarity_metric: SimilarityMetric = SimilarityMetric.COSINE
 
-    # Search type
     search_type: SearchType = SearchType.HYBRID
 
-    # Results configuration
     top_k: int = 10
-    top_k_vector: int = 50  # Candidates from vector search
-    top_k_keyword: int = 50  # Candidates from keyword search
+    top_k_vector: int = 50
+    top_k_keyword: int = 50
 
-    # Hybrid search weights
     vector_weight: float = 0.7
     keyword_weight: float = 0.3
 
-    # Reranking configuration
     enable_reranking: bool = True
-    rerank_top_k: int = 20  # How many to rerank
+    rerank_top_k: int = 20
     rerank_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 
-    # Filtering
     min_score_threshold: float = 0.0
     filter_metadata: Optional[Dict[str, Any]] = None
 
-    # Context grounding limits
     max_context_tokens: int = 4000
     max_context_chunks: int = 5
 
