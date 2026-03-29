@@ -31,7 +31,7 @@ class DocumentStatus(Enum):
             self.PENDING: {self.PROCESSING, self.FAILED},
             self.PROCESSING: {self.PROCESSED, self.FAILED},
             self.PROCESSED: {self.ARCHIVED},
-            self.FAILED: {self.PENDING},  # Allow retry
+            self.FAILED: {self.PENDING},
             self.ARCHIVED: set()
         }
         return new_status in valid_transitions.get(self, set())

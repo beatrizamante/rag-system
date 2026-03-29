@@ -29,6 +29,8 @@ class SearchType(Enum):
     VECTOR = "vector"
     KEYWORD = "keyword"
     HYBRID = "hybrid"
+    GRAPH = "graph"
+    HYBRID_GRAPH = "hybrid_graph"  # vector + keyword + graph
 
 
 @dataclass(frozen=True)
