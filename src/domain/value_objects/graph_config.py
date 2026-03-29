@@ -34,7 +34,6 @@ class GraphConfig:
     max_community_summaries: int = 3
     max_entity_context: int = 10
 
-    # Weighting when combined with vector search
     graph_weight: float = 0.3  # in hybrid vector+graph search
 
     def to_dict(self) -> Dict[str, Any]:
